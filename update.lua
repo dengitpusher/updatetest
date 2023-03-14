@@ -11,7 +11,7 @@ local u8d = function(s) return encoding.UTF8:decode(s) end
 
 update = false
 
-local scrcommit = 3
+local scrcommit = 4
 local script_version = 1.1
 
 local update_url = "https://raw.githubusercontent.com/dengitpusher/updatetest/main/update.ini" -- тут тоже свою ссылку
