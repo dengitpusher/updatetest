@@ -7,6 +7,8 @@ encoding = require("encoding")
 encoding.default = 'CP1251'
 u8 = encoding.UTF8
 
+local u8d = function(s) return encoding.UTF8:decode(s)
+
 update = false
 
 local scrcommit = 2
@@ -28,9 +30,9 @@ f:close()
 
 updateIni = inicfg.load(nil, update_path)
 	if tonumber(updateIni.update.commit) > tonumber(scrcommit) then
-		print(u8"Есть обновление! Версия: " .. updateIni.update.version)
-		print(u8"Есть обновление! Версия: " .. updateIni.update.version)
-		print(u8"Есть обновление! Версия: " .. updateIni.update.version)
+		print(u8d"Есть обновление! Версия: " .. updateIni.update.version)
+		print(u8d"Есть обновление! Версия: " .. updateIni.update.version)
+		print(u8d"Есть обновление! Версия: " .. updateIni.update.version)
 		update = true
 	end
 os.remove(update_path)
