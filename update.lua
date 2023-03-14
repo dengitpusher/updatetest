@@ -19,7 +19,7 @@ function onLoad()
 local body, code = https.request(update_url)
 if not body then error(code) end
 -- save the content to a file
-local f = assert(io.open('update.ini', 'w')) -- open in "binary" mode
+local f = assert(io.open(update_path, 'w')) -- open in "binary" mode
 f:write(body)
 f:close()
 
