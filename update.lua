@@ -12,7 +12,7 @@ local script_version = 1.0
 local update_url = "https://raw.githubusercontent.com/dengitpusher/updatetest/main/update.ini" -- тут тоже свою ссылку
 local update_path = getPath().."config//update.ini" -- и тут свою ссылку
 
-local script_url = "https://github.com/thechampguess/scripts/blob/master/autoupdate_lesson_16.luac?raw=true" -- тут свою ссылку
+local script_url = "https://raw.githubusercontent.com/dengitpusher/updatetest/main/update.lua" -- тут свою ссылку
 local script_path = "scripts//update.lua"
 
 function onLoad()
@@ -30,7 +30,7 @@ updateIni = inicfg.load(nil, update_path)
 		print("Есть обновление! Версия: " .. updateIni.update.version)
 		update = true
 	end
---os.remove(update_path)
+os.remove(update_path)
 end
 	
 newTask(function()
