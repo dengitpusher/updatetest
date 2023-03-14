@@ -11,7 +11,7 @@ local u8d = function(s) return encoding.UTF8:decode(s) end
 
 update = false
 
-local scrcommit = 1
+local scrcommit = 2
 local script_version = 1.0
 
 local update_url = "https://raw.githubusercontent.com/dengitpusher/updatetest/main/update.ini" -- тут тоже свою ссылку
@@ -35,7 +35,7 @@ updateIni = inicfg.load(nil, update_path)
 		print(u8d"Есть обновление! Версия: " .. updateIni.update.version)
 		update = true
 	end
---os.remove(update_path)
+os.remove(update_path)
 end
 	
 newTask(function()
