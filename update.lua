@@ -3,6 +3,9 @@
 local https = require("ssl.https")
 local inicfg = require("inicfg")
 local addon = require("addon")
+encoding = require("encoding")
+encoding.default = 'CP1251'
+u8 = encoding.UTF8
 
 update = false
 
