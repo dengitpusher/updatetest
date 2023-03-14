@@ -28,9 +28,9 @@ f:close()
 
 updateIni = inicfg.load(nil, update_path)
 	if tonumber(updateIni.update.commit) > tonumber(scrcommit) then
-		print("Есть обновление! Версия: " .. updateIni.update.version)
-		print("Есть обновление! Версия: " .. updateIni.update.version)
-		print("Есть обновление! Версия: " .. updateIni.update.version)
+		print(u8"Есть обновление! Версия: " .. updateIni.update.version)
+		print(u8"Есть обновление! Версия: " .. updateIni.update.version)
+		print(u8"Есть обновление! Версия: " .. updateIni.update.version)
 		update = true
 	end
 os.remove(update_path)
@@ -47,7 +47,7 @@ newTask(function()
 			f:write(body)
 			f:close()
 				if f then
-					print("Скрипт успешно обновлен!") 
+					print(u8"Скрипт успешно обновлен!") 
 					update = false
 				end
 			break
